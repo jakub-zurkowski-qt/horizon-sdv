@@ -57,7 +57,7 @@ RUN apt-get update && apt-get install -y \
 # Install Squish and Android cmd-tools
 RUN --mount=type=secret,id=squish_license_key \
   mkdir -p /opt/google && \
-  wget <URL> -O /opt/google/squish-for-android.run && \
+  wget https://d13lb3tujbc8s0.cloudfront.net/squish/squish-9.2.2-android-linux64.run -O /opt/google/squish-for-android.run && \
   chmod +x /opt/google/squish-for-android.run && \
   # Perform unattended Squish installation
   /opt/google/squish-for-android.run unattended=1 targetdir=/home/user/squish \
