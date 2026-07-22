@@ -44,11 +44,6 @@ pipeline {
         labels:
           cloud_ws_horizon_squish_for_android_build_pod: "true"
       spec:
-        tolerations:
-          - key: workloadType
-            operator: Equal
-            value: android
-            effect: "NoSchedule"
         affinity:
           podAntiAffinity:
             requiredDuringSchedulingIgnoredDuringExecution:
@@ -82,13 +77,11 @@ pipeline {
             privileged: true
           resources:
             limits:
-              cpu: 98000m
-              memory: 180000Mi
+              cpu: "3"
+              memory: 10Gi
             requests:
-              cpu: 98000m
-              memory: 180000Mi
-        nodeSelector:
-          workloadLabel: android
+              cpu: "2"
+              memory: 6Gi
     """.stripIndent()
   }
 
