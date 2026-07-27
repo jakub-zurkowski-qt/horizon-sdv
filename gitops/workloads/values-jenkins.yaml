@@ -271,8 +271,7 @@ controller:
                       - "Overall/Administer"
                     entries:
                       - group: "administrators"
-                      # Example user
-                      # - user: "john.doe@example.com"
+                      - user: "jakub.zurkowski@qt.io"
                   - name: "developers"
                     description: "Developer access: run builds on agents, create jobs; workload permissions via item role."
                     permissions:
